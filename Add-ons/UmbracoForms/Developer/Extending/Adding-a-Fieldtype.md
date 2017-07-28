@@ -26,7 +26,7 @@ Then we will start building the view
     <input type="text" name="@Model.Name" id="@Model.Id" class="text" value="@Model.Value" maxlength="500"
     @{if(Model.Mandatory || Model.Validate){<text>data-val="true"</text>}}
     @{if (Model.Mandatory) {<text> data-val-required="@Model.RequiredErrorMessage"</text>}}
-    @{if (Model.Validate) {<text> data-val-regex="@Model.InvalidErrorMessage" data-regex="@Html.Raw(Model.Regex)"</text>}}
+    @{if (Model.Validate) {<text> data-val-regex="@Model.InvalidErrorMessage" data-regex="@Html.Raw(Model.Regex)"</text>}} />
 
 The view simply takes care of generating the UI control and setting its value. Views are found in the `Views\Partials\Forms\Fieldtypes\` directory.
 
